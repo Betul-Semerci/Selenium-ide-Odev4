@@ -29,5 +29,8 @@ class TestValidlogin():
     self.driver.find_element(By.ID, "password").click()
     self.driver.find_element(By.NAME, "password").send_keys("secret_sauce")
     self.driver.find_element(By.ID, "login-button").click()
+    inventory_items = self.driver.find_elements(By.CLASS_NAME,c.CLASS_NAMEE)
+    assert len(inventory_items) == c.LEN
     self.driver.close()
-  
+
+    
